@@ -19,5 +19,5 @@ from django.urls import include     # для добавления своих п�
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('book-outlet/', include("book_outlet.urls"))
+    # path('book-outlet/', include("book_outlet.urls"))
 ]
