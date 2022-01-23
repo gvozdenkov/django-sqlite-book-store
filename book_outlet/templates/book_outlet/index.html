@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    All books
+{% endblock title %}
+
+{% block content %}
+
+<ul>
+    {% for book in all_books %}
+    <li>
+        {% comment %} альтернатива 
+            <a href="{% url 'book-detail-page' id=book.id %}">  {% endcomment %}
+            <a href="{{ book.get_absolute_url }}">
+            {{ book.title }}
+        </a>
+        (rating: {{ book.rating }})</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
+
