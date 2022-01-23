@@ -18,5 +18,16 @@
     {% endfor %}
 </ul>
 
+<hr>
+
+<p>
+    Total books: {{ total_books }}
+</p>
+
+<p>
+    Average rating of books: {{ average_rating.rating__avg }} with minimum rating {{ average_rating.rating__min }}
+</p>
+
+
 {% endblock content %}
 
