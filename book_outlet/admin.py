@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from . models import Book
+from . models import Adress, Author, Book, Country
 
 # Register your models here.
 
@@ -11,6 +11,14 @@ class BookAdmin(admin.ModelAdmin):
     list_filter = ("author", "rating")
     list_display = ("title", "author")
 
+class AuthorAdmin(admin.ModelAdmin):
+    list_display = ("first_name", "last_name", "adress")
+
+
+
 # этот модуль добавить в админскую панель
 # для настройки вида добавить BookAdmin
 admin.site.register(Book, BookAdmin)
+admin.site.register(Author, AuthorAdmin)
+admin.site.register(Adress)
+admin.site.register(Country)
